@@ -18,17 +18,15 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: 資訊筆記 by JHTNT
+email: 
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  存放資訊筆記及問題解決經驗
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
-
+permalink: /articles/:year:month:day-:title
+excerpt_separator:  '<!-- more -->'
+github_username:  
 # Build settings
 theme: minima
 plugins:
@@ -54,5 +52,11 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-# 語法高亮
+# 語法 highlight
 highlighter: rouge
+
+# 增加 tag
+collections:
+  tag:
+    output: true
+    permalink: /tag/:name
