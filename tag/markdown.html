@@ -1,0 +1,23 @@
+---
+layout: default
+title: 標籤：markdown
+---
+<div class="posts">
+    <h3 class="tag-name">標籤：markdown</h3>
+
+    {% for post in site.tags.markdown %}
+    <h4 class="post-title">
+        <a href="{{ site.baseurl }}{{ post.url }}">
+            {{ post.title }}
+        </a>
+    </h4>
+    <small class="post-date">
+        {{ post.date | date: "%Y-%m-%d" }}
+        {% for tag in post.tags %}
+        <a href="{{ site.baseurl }}/tag/{{ tag }}" style="border-radius: 9px;background: #82cfa9;color: rgb(252, 252, 252);padding: 5px;padding-top: 0px;padding-bottom: 1px;">
+            #{{ tag }}
+        </a>&nbsp;
+    </small>
+    {% endfor %}
+    {% endfor %}
+</div>
