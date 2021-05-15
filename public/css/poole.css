@@ -158,15 +158,15 @@ code {
   font-size: 85%;
   color: #bf616a;
   background-color: #e7e7e7;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 pre {
   display: block;
   margin-top: 0;
   margin-bottom: 1rem;
-  padding: 1rem;
-  font-size: .8rem;
-  line-height: 1.4;
+  padding: 0.8rem;
+  font-size: .75rem;
+  line-height: 1.2;
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
