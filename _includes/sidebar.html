@@ -11,7 +11,9 @@
   <nav class="sidebar-nav">
     <a class="sidebar-nav-item{% if page.title == '首頁' %} active{% endif %}" href="/">首頁</a>
 
-    <a class="sidebar-nav-item{% if page.title == 'test' %} active{% endif %}" href="/tag/test">•Test：分類測試</a>
+    <a class="sidebar-nav-item{% if page.title == '標籤：jekyll' %} active{% endif %}" href="/tag/jekyll">•Jekyll</a>
+    <a class="sidebar-nav-item{% if page.title == '標籤：markdown' %} active{% endif %}" href="/tag/markdown">•Markdown</a>
+    <a class="sidebar-nav-item{% if page.title == '標籤：python' %} active{% endif %}" href="/tag/python">•Python</a>
 
     <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">404</a>
     <a class="sidebar-nav-item" href="https://github.com/JHTNT/jhtnt.github.io">GitHub</a>
@@ -19,7 +21,7 @@
 
   <div class="sidebar-item">
     <p>
-      &copy; {{ site.time | date: '%Y' }}. All rights reserved.
+      &copy; {{ site.time | date: '%Y' }}.
     </p>
   </div>
 </div>

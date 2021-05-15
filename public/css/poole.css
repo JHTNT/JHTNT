@@ -43,6 +43,7 @@
 
 html,
 body {
+  font-size: 18px;
   margin: 0;
   padding: 0;
 }
@@ -52,9 +53,9 @@ html {
   font-size: 16px;
   line-height: 1.5;
 }
-@media (min-width: 38em) {
+@media (min-width: 40em) {
   html {
-    font-size: 20px;
+    font-size: 20.5px;
   }
 }
 
@@ -156,7 +157,7 @@ code {
   padding: .25em .5em;
   font-size: 85%;
   color: #bf616a;
-  background-color: #f9f9f9;
+  background-color: #e7e7e7;
   border-radius: 3px;
 }
 pre {
@@ -170,7 +171,7 @@ pre {
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
-  background-color: #f9f9f9;
+  background-color: #e7e7e7;
 }
 pre code {
   padding: 0;
@@ -212,8 +213,8 @@ pre code {
 
 /* Quotes */
 blockquote {
-  padding: .5rem 1rem;
-  margin: .8rem 0;
+  padding: .25rem 1rem;
+  margin: .5rem 0;
   color: #7a7a7a;
   border-left: .25rem solid #e5e5e5;
 }
