@@ -15,7 +15,7 @@ layout: default
         {% endfor %}
         <br/><br/>
     </div>
-    {{ content }}
+    {{ content | toc }}
 </div>
 
 {% if site.related_posts.size >= 1 %}

@@ -31,6 +31,7 @@ github_username:
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-toc
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -60,3 +61,8 @@ collections:
   tag:
     output: true
     permalink: /tag/:name
+
+# 目錄
+toc:
+  min_level: 2
+  max_level: 4
