@@ -4,6 +4,7 @@ title: 首頁
 ---
 
 <h1>所有文章</h1>
+<br/>
 <div class="posts">
     {% for post in site.posts limit:5 %}
     <h3 class="post-title">
@@ -23,7 +24,7 @@ title: 首頁
     <a href="{{ site.baseurl }}{{ post.url }}">
         繼續閱讀→
     </a>
-    <br/><br/>
+    <br/><br/><br/>
     {% endfor %}
 </div>
 
