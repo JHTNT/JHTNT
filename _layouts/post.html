@@ -20,7 +20,9 @@ layout: default
         {% endfor %}
         <br/><br/>
     </div>
-    {{ content | toc }}
+    {% include toc.html html=content h_max=4 %}
+    <br/>
+    {{ content}}
 </div>
 
 {% if site.related_posts.size >= 1 %}
