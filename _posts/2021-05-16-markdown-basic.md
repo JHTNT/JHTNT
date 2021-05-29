@@ -3,7 +3,6 @@ layout: post
 title: Markdown 基礎語法
 tags:
     - "markdown"
-toc: true
 ---
 
 Markdown 的格式、標題、列表、標記重點及其他基本功能。
