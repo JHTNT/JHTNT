@@ -30,10 +30,10 @@ layout: default
                 {% continue %}
             {% else %}
                 <li>
-                    <h3>
+                    <h4>
                         <a href="{{ site.baseurl }}{{ related.url }}">{{ related.title }}</a>
                         <small>{{ related.date | date: "%Y-%m-%d" }}</small>
-                    </h3>
+                    </h4>
                 </li>
             {% endif %}
         {% endfor %}
