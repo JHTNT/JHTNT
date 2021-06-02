@@ -15,9 +15,16 @@ layout: default
         {% endfor %}
         <br/><br/>
     </div>
-    {% include toc.html html=content h_max=4 %}
+    
+    <nav class="toc">
+    {% include toc.html html=content h_max=5 %}
+    <svg class="toc-marker" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <path stroke="gray" stroke-width="3" fill="transparent" stroke-dasharray="0, 0, 0, 1000" stroke-linecap="round" stroke-linejoin="round" transform="translate(-0.5, -0.5)" />
+    </svg>
+    </nav>
+    <div class="phone">{% include toc.html html=content h_max=5 %}</div>
     <br/>
-    {{ content}}
+    {% include anchor_headings.html html=content anchorBody="#" beforeHeading=true h_max=5 %}
 </div>
 
 {% if site.related_posts.size >= 1 %}

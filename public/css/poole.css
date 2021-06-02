@@ -17,6 +17,7 @@
 /*
  * Contents
  *
+ * Table of Content
  * Body resets
  * Custom type
  * Messages
@@ -27,6 +28,18 @@
  * Reverse layout
  * Themes
  */
+
+/*
+ * Table of Content
+ *
+ * 浮動式目錄
+ * https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/
+ */
+
+/* 1. Enable smooth scrolling */
+html {
+	scroll-behavior: smooth;
+}
 
 
 /*
@@ -100,7 +113,7 @@ h3 {
   font-size: 1.5rem;
 }
 h4 {
-  margin-top: 1.25rem;
+  margin-top: 1.15rem;
   font-size: 1.25rem;
 }
 h5, h6 {
@@ -158,10 +171,11 @@ pre {
   font-family: Menlo, Monaco, 'Source Code Pro', monospace;
 }
 code {
-  padding: .25em .5em;
+  padding: .25em .25em;
   font-size: 85%;
-  color: #bf616a;
-  background-color: #f0f0f0;
+  font-weight: bold;
+  color: #ececec;
+  background-color: #1E1E1E;
   border-radius: 5px;
 }
 pre {
@@ -433,4 +447,61 @@ a.pagination-item:hover {
     border-top-right-radius:    4px;
     border-bottom-right-radius: 4px;
   }
+}
+
+/* 固定式目錄 */
+.toc {
+  position: fixed;
+  font-size: 0.75rem;
+  right: 0;
+  top: 5em;
+  padding: 1em;
+  width: 20em;
+  height: 100vh;
+  line-height: 1.75;
+}
+.toc li a {
+  text-decoration: none;
+}
+.toc ul {
+  list-style: none;
+  padding: 0;
+}
+.toc ul ul {
+  padding-left: 1.5em;
+}
+.toc ul ul  ul{
+  padding-left: 2em;
+}
+.toc li.visible > a {
+  color: rgb(155, 155, 155);
+  transform: translate(5px);
+}
+.toc-marker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.toc-marker path {
+  transition: all 0.3s ease;
+}
+
+/* 在小螢幕裝置隱藏 */
+@media screen and (max-width: 1400px) {
+  .toc { display: none; }  /* hide it on small screens */
+  .toc-marker { display: none; }
+  .phone  { display: block; }
+}
+
+@media screen and (min-width: 1401px) {
+  .toc { display: inline-block; }   /* show it elsewhere */
+  .toc-marker { display: inline-block; }
+  .phone  { display: none; }
+}
+
+.toc_5 {
+  display: none;
 }
