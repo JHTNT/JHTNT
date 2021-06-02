@@ -451,10 +451,12 @@ a.pagination-item:hover {
 
 /* 固定式目錄 */
 .toc {
+  font-weight: bold;
+  background-color: #fff;
   position: fixed;
   font-size: 0.75rem;
   right: 0;
-  top: 5em;
+  top: 1.5em;
   padding: 1em;
   width: 20em;
   height: 100vh;
