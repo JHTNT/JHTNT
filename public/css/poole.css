@@ -175,7 +175,7 @@ code {
   font-size: 85%;
   font-weight: bold;
   color: #ececec;
-  background-color: #1E1E1E;
+  background-color: #333333;
   border-radius: 5px;
 }
 pre {
@@ -190,7 +190,7 @@ pre {
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
-  background-color: #1E1E1E;
+  background-color: #333333;
 }
 pre code {
   padding: 0;
