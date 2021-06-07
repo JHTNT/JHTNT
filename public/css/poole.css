@@ -101,6 +101,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #313131;
   text-rendering: optimizeLegibility;
 }
+h5, h6 {
+  line-height: 1;
+}
 h1 {
   font-size: 2rem;
 }
@@ -128,14 +131,14 @@ p {
 }
 
 strong {
-  color: #86b3b3;
+  background: linear-gradient(transparent 50%, #fdff8ec5 0%);
 }
 
 
 /* Lists */
 ul, ol, dl {
-  margin-top: 0;
-  margin-bottom: 0rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 dt {
@@ -171,12 +174,11 @@ pre {
   font-family: Menlo, Monaco, 'Source Code Pro', monospace;
 }
 code {
-  padding: .25em .25em;
+  padding: .15em .35em;
   font-size: 85%;
   font-weight: bold;
-  color: #ececec;
-  background-color: #333333;
-  border-radius: 5px;
+  background-color: rgb(224, 224, 224);
+  border-radius: 6px;
 }
 pre {
   display: block;
@@ -195,7 +197,7 @@ pre {
 pre code {
   padding: 0;
   font-size: 100%;
-  color: inherit;
+  color: rgb(197, 197, 197);
   background-color: transparent;
 }
 
@@ -250,7 +252,7 @@ blockquote p:last-child {
 img {
   display: block;
   max-width: 100%;
-  margin: 0 0 1rem;
+  margin: 0.5rem 0 1rem;
   border-radius: 5px;
 }
 
@@ -456,7 +458,7 @@ a.pagination-item:hover {
   position: fixed;
   font-size: 0.75rem;
   right: 0;
-  top: 1.5em;
+  top: 1em;
   padding: 1em;
   width: 20em;
   height: 100vh;
@@ -466,6 +468,8 @@ a.pagination-item:hover {
   text-decoration: none;
 }
 .toc ul {
+  margin-top: 0;
+  margin-bottom: 0;
   list-style: none;
   padding: 0;
 }
@@ -506,4 +510,28 @@ a.pagination-item:hover {
 
 .toc_5 {
   display: none;
+}
+
+/* 凸顯區塊 */
+.info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.info strong {
+  background: transparent;
+}
+.warning {
+  color: #896C3A;
+  background-color: #fdf6d0;
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.warning strong {
+  background: transparent;
 }
