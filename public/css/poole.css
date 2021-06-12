@@ -184,7 +184,7 @@ pre {
   display: block;
   margin-top: 0;
   margin-bottom: 1rem;
-  padding: 0.6rem;
+  padding: 0.65rem;
   font-size: .75rem;
   font-weight: bold;
   line-height: 1.2;
@@ -207,6 +207,8 @@ pre code {
   border-radius: 4px;
 }
 .highlight pre {
+  overflow-x: auto;
+  white-space: pre;
   margin-bottom: 0;
 }
 
