@@ -127,7 +127,7 @@ h5, h6 {
 /* Body text */
 p {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 
 strong {
@@ -151,10 +151,10 @@ dd {
 /* Misc */
 hr {
   position: relative;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
   border: 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #fff;
+  border-top: 2px solid #eee;
+  border-bottom: 2px solid #fff;
 }
 
 abbr {
