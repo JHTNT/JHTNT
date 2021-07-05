@@ -177,7 +177,8 @@ code {
   padding: .1em .35em;
   font-size: 85%;
   font-weight: bold;
-  background-color: rgb(224, 224, 224);
+  color: rgb(218, 124, 124);
+  background-color: rgb(233, 233, 233);
   border-radius: 6px;
 }
 pre {
