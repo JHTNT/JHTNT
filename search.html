@@ -1,0 +1,32 @@
+---
+layout: default
+title: 搜尋
+---
+<input type="text" id="search-input" class="input" name="keyword" required="true" placeholder="搜尋文章內容"
+    maxlength="30" autocomplete="off">
+<br/><br/><ul id="results-container"></ul>
+
+<style>
+html,
+body {
+  overflow-x: visible;
+}
+
+#search-input {
+    display: inline;
+}
+</style>
+
+<script src="../public/js/simple-jekyll-search.min.js"></script>
+<script>
+window.simpleJekyllSearch = new SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li><h5><a href="{url}">{title}</a></h5></li>',
+    noResultsText: '查無相關內容',
+    limit: 20, // 搜尋上限
+    fuzzy: false, // 模糊搜尋
+    debounceTime: 200
+})
+</script>

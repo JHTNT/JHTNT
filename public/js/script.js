@@ -139,3 +139,39 @@ function sync() {
   lastPathEnd = pathEnd;
 
 }
+
+// 搜尋欄
+
+//获取url中"?"符后的字符串并正则匹配
+function GetQueryString(name) {
+  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+  var r = window.location.search.substr(1).match(reg); //获取url中"?"符后的字符串并正则匹配
+  var context = "";
+  if (r != null)
+      context = r[2];
+  reg = null;
+  r = null;
+  return context == null || context == "" || context == "undefined" ? "" : context;
+}
+
+//将URL中的UTF-8字符串转成中文字符串
+function getCharFromUtf8(str) {
+  var cstr = "";
+  var nOffset = 0;
+  if (str == "")
+      return "";
+  str = str.toLowerCase();
+  nOffset = str.indexOf("%e");
+  if (nOffset == -1)
+      return str;
+  while (nOffset != -1) {
+      cstr += str.substr(0, nOffset);
+      str = str.substr(nOffset, str.length - nOffset);
+      if (str == "" || str.length < 9)
+          return cstr;
+      cstr += utf8ToChar(str.substr(0, 9));
+      str = str.substr(9, str.length - 9);
+      nOffset = str.indexOf("%e");
+  }
+  return cstr + str;
+}
